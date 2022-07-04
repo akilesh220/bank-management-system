@@ -3,6 +3,7 @@ CREATE TABLE `lessons_learnt`.`lessons_learnt` (`discipline` VARCHAR(20) NOT NUL
 `type_ll` VARCHAR(10) NOT NULL , 
 
 `seq_id` INT(10) DEFAULT '0000'  , 
+
 `project_name` VARCHAR(50) NOT NULL , 
 
 `client` VARCHAR(50) NOT NULL , 
