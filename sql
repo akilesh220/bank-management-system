@@ -1,6 +1,6 @@
 CREATE TABLE `lessons_learnt`.`lessons_learnt` (`discipline` VARCHAR(20) NOT NULL , 
 `type_ll` VARCHAR(10) NOT NULL , 
-`sequence_no` INT(10) NOT NULL , 
+`seq_id` INT(10) DEFAULT '0000'  , 
 `project_name` VARCHAR(50) NOT NULL , 
 `client` VARCHAR(50) NOT NULL , 
 `facility_category` VARCHAR(50) NOT NULL , 
@@ -13,7 +13,7 @@ CREATE TABLE `lessons_learnt`.`lessons_learnt` (`discipline` VARCHAR(20) NOT NUL
 `approver` VARCHAR NOT NULL , 
 `attachment` BLOB NOT NULL ) ENGINE = InnoDB;
 
-DEFAULT 0000
+
 
 
 CREATE TRIGGER `seq_id_update`
