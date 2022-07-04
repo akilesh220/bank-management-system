@@ -17,7 +17,7 @@ CREATE TABLE `lessons_learnt`.`lessons_learnt` (`discipline` VARCHAR(20) NOT NUL
 
 
 CREATE TRIGGER `seq_id_update`
-BEFORE INSERT ON `lesson learnt`
+BEFORE INSERT ON `lesson_learnt`
 FOR EACH ROW 
 BEGIN
     IF NEW.seq_id IS NULL THEN
