@@ -16,11 +16,11 @@ CREATE TABLE `lessons_learnt`.`lessons_learnt` (`discipline` VARCHAR(20) NOT NUL
 DEFAULT 0000
 
 
-CREATE TRIGGER `order_guide_insert_trigger`
-BEFORE INSERT ON `order_guide`
+CREATE TRIGGER `seq_id_update`
+BEFORE INSERT ON `lesson learnt`
 FOR EACH ROW 
 BEGIN
-    IF NEW.Sort_Placement IS NULL THEN
-        SET NEW.Sort_Placement = (SELECT ID FROM order_Guide ORDER BY id DESC LIMIT 1) + 1;
+    IF NEW.seq_id IS NULL THEN
+        SET NEW.seq_id = (SELECT seq_id FROM lesson_learnt ORDER BY seq_id DESC LIMIT 1) + 1;
     END IF;
 END;
